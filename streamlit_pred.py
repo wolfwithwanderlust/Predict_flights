@@ -113,7 +113,7 @@ def prediction_form_page():
         prediction = model.predict(input_df)
 
         # Afficher le résultat avec un peu de couleur
-        if prediction[0] == 1:
+        if prediction[1] == 0:
             st.error("Le vol est prédit comme étant en retard")
         else:
             st.success("Le vol est prédit comme étant à l'heure")
